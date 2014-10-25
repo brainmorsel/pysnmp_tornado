@@ -1,4 +1,5 @@
 pysnmp_tornado
 ==============
 
-Tornado transport inmplementation for PySNMP. Based on asyncore transport. Example of usage in `examples/`.
+[Tornado](http://www.tornadoweb.org) transport implementation for [PySNMP](http://pysnmp.sourceforge.net/).
+Based on asyncore transport. Example of usage in `examples/`.
