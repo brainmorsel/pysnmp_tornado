@@ -31,4 +31,9 @@ class TornadoDispatcher(AbstractTransportDispatcher):
         return 0
     
     def on_timer(self):
-        self.handleTimerTick(self.io_loop.time())
+        try:
+            self.handleTimerTick(self.io_loop.time())
+        except Exception:
+            self.timer.stop()
+            self.io_loop.stop()
+            raise
