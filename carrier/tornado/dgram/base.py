@@ -98,3 +98,7 @@ class DgramSocketTransport(AbstractSocketTransport):
                 raise error.CarrierError('recvfrom() failed: %s' % (sys.exc_info()[1],))
 
 
+    def getOutQueueLenth(self):
+        return len(self.__outQueue)
+
+
